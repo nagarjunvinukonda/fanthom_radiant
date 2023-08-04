@@ -40,7 +40,6 @@ class TestPublisher(unittest.TestCase):
         # Wait for a few seconds to allow messages to be received and processed
         rospy.sleep(1)
 
-
 if __name__ == '__main__':
     import rostest
     rostest.rosrun('fathom_radiant', 'test_publisher', TestPublisher)
