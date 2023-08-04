@@ -1,6 +1,6 @@
-# fanthom_radiant Programming Challenge: ROS1
+# fathom_radiant Programming Challenge: ROS1
 
-The aim of this project is to read the csv file and compute the time difference between each row and compare with the existing ground truth in dataset. This project reads the existing Dataset.csv in fanthom_radiant/src folder. Hence, no need to provide path for csv. I have also ensured if the user has a preference for providing csv path, he can provide it in the launch file as a ros param and comment out to modify the code accordingly. 
+The aim of this project is to read the csv file and compute the time difference between each row and compare with the existing ground truth in dataset. This project reads the existing Dataset.csv in fathom_radiant/src folder. Hence, no need to provide path for csv. I have also ensured if the user has a preference for providing csv path, he can provide it in the launch file as a ros param and comment out to modify the code accordingly. 
 
 Though the project requires me to complete using ROS2. My PC doesn't have enough resources and system requirements to install *ROS2*, *Calcon*. Hence, I am using Ubuntu 18.0.4 ROS1 melodic for this project to simplify and complete it within 4hrs time.
 
@@ -50,7 +50,7 @@ catkin_make
 Download this repo and put it in the src folder of the catkin_ws and unzip it.
 ```
 cd ~/catkin_ws/src/
-git clone https://github.com/nagarjunvinukonda/fanthom_radiant.git
+git clone https://github.com/nagarjunvinukonda/fathom_radiant.git
 ```
 
 
@@ -79,26 +79,26 @@ Open terminal:
 
 ```
 cd catkin_ws
-roslaunch fanthom_radiant data_python.launch
+roslaunch fathom_radiant data_python.launch
 ```
 
 In case you are running on higher version and having ROS melodic Python2.7 conflicts. I ensure to create c++ scripts to run the project on different versions of Ubuntu with ROS1 version. 
 
 ```
 cd catkin_ws
-roslaunch fanthom_radiant data_cpp.launch
+roslaunch fathom_radiant data_cpp.launch
 ```
 
 ### Running testing framework
 Once you have launched the publisher and subscriber scripts using the launch file. Now you can run unit tests for publisher and subscriber <br/>
 Unit test for publisher:
 ```
-rosrun fanthom_radiant test_publisher.py
+rosrun fathom_radiant test_publisher.py
 ```
 
 Unit test for subscriber:
 ```
-rosrun fanthom_radiant test_subscriber.py
+rosrun fathom_radiant test_subscriber.py
 ```
 
 ## Do's & Dont's:
@@ -113,7 +113,7 @@ The pub.py node publishes topic called "/data" after reading Dataset.csv file. "
 ## Directory structure:
 
 ```
-fanthom_radiant/
+fathom_radiant/
 ├── CMakeLists.txt
 ├── launch
 │   └── data_python.launch
