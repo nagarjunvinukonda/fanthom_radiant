@@ -14,13 +14,13 @@ class TestSubscriber(unittest.TestCase):
         published_topics = rospy.get_published_topics()
         # Check if the '/diff' topic is in the list of published topics
         self.assertTrue('/diff' in [topic for topic, msg_type in published_topics])
-        # Create a list to store received messages
+        # a list to store received messages
         received_msgs = []
 
         def diff_data_callback(data):
             received_msgs.append(data)
 
-        # Create a subscriber to listen to the '/diff' topic
+        # subscriber to listen to the '/diff' topic
         rospy.Subscriber('/diff', DiffData, diff_data_callback)
         # Wait for a few seconds to allow messages to be received and processed
         rospy.sleep(2)
@@ -33,25 +33,25 @@ class TestSubscriber(unittest.TestCase):
     def test_subscribing_dataDiff(self):
         rospy.init_node('test_subscriber_node')
 
-        # Create a list to store received time differences
+        # list to store received time differences and known time differences
         received_diffs = []
         known_diffs = []
 
         def diff_data_callback(data):
             received_diffs.append(data)
 
-        # Create a subscriber to listen to the 'diff' topic
+        # subscriber to listen to the 'diff' topic
         rospy.Subscriber('/diff', DiffData, diff_data_callback)
 
         def data_callback(data):
             known_diffs.append(data)
 
-        # Create a subscriber to listen to the 'diff' topic
+        # subscriber to listen to the 'diff' topic
         rospy.Subscriber('/data', CustomData, data_callback)
-        rospy.sleep(0)
+        rospy.sleep(2)
         
         for diff_msg, expected_diff in zip(received_diffs, known_diffs):
-            # Add your assertions here to validate each received time difference
+            # assertion here is to validate each received time difference from expected or known time difference
             self.assertAlmostEqual(diff_msg.time_difference, expected_diff.time_difference, delta=0.1)
 
 if __name__ == '__main__':

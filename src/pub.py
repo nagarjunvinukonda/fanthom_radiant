@@ -39,7 +39,8 @@ def publish_csv_data(file_path, publisher, rate_hz=3):
                 latitude=float(row[2]),
                 altitude=float(row[3]),
                 time=row[4],
-                actual_speed=float(row[5])
+                actual_speed=float(row[5]),
+                time_difference= float(row[6])
             )
             publisher.publish(data_msg)
             rate.sleep()

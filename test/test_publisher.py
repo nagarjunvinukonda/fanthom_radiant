@@ -9,13 +9,13 @@ class TestPublisher(unittest.TestCase):
     def test_publishing_data_types(self):
         rospy.init_node('test_publisher_node')
 
-        # Create a list to store received messages
+        # list to store received messages
         received_msgs = []
 
         def custom_data_callback(data):
             received_msgs.append(data)
 
-        # Create a subscriber to listen to the 'data' topic
+        # Subscriber to listen to the 'data' topic
         rospy.Subscriber('data', CustomData, custom_data_callback)
 
         # Wait for a few seconds to allow messages to be received and processed

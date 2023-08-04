@@ -54,6 +54,8 @@ void publish_csv_data(const std::string& file_path, ros::Publisher& publisher, d
         data_msg.time = token;
         getline(iss, token, ','); // Actual_Speed
         data_msg.actual_speed = std::stod(token);
+        getline(iss, token, ','); // Time_diff
+        data_msg.time_difference = std::stod(token);
 
         publisher.publish(data_msg);
         rate.sleep();
