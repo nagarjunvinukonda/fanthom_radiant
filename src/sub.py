@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from fanthom_radiant.msg import DiffData, CustomData
+from fathom_radiant.msg import DiffData, CustomData
 from std_msgs.msg import Float32
 from datetime import datetime
 
