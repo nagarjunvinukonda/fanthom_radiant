@@ -100,6 +100,14 @@ Unit test for subscriber:
 ```
 rosrun fathom_radiant test_subscriber.py
 ```
+### Information on tests:
+The test_publsiher:<br/>
+1) test_publishing_data_types: It checks for correct data types in the message file as expected from CSV.
+2) test_publishing_topic_publish: It checks if the topic '/data' is published or not <br/>
+
+The test_subscriber: <br/>
+1) test_subscriber_dataLength: It checks if the topic '/diff' is published or not, the message time difference data type is float and the length of the message received is >0 and exists. 
+2) test_subscribing_dataDiff: It checks if the time difference computed from '/diff' and the time difference available in .csv are equal or not
 
 ## Do's & Dont's:
 
