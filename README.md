@@ -137,7 +137,12 @@ fathom_radiant/
 
 ## output:
 
-Once data_python.launch has runned.<br/>
+Once data_python.launch has launched.<br/>
+
+Dont forget to source your repo on the terminal.<br/>
+```
+source devel/setup.bash
+```
 
 To visualize final time diff:
 ```
