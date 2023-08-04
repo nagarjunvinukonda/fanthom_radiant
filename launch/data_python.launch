@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <!-- Start the publisher node -->
-    <node name="csv_publisher" pkg="fanthom_radiant" type="pub.py" output="screen">
-        <param name="file_path" value="/home/nagarjunv/cat_ws/src/fanthom_radiant/src/Dataset.csv"/>
+    <node name="csv_publisher" pkg="fathom_radiant" type="pub.py" output="screen">
+        <param name="file_path" value="/home/nagarjunv/cat_ws/src/fathom_radiant/src/Dataset.csv"/>
     </node>
 
     <!-- Start the subscriber node -->
-    <node name="csv_subscriber" pkg="fanthom_radiant" type="sub.py" output="screen"/>
+    <node name="csv_subscriber" pkg="fathom_radiant" type="sub.py" output="screen"/>
 </launch>
 
