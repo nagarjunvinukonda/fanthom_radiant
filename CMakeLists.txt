@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(fanthom_radiant)
+project(fathom_radiant)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++17)
@@ -111,7 +111,7 @@ find_package(Boost REQUIRED COMPONENTS date_time)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES fanthomRadiant
+#  LIBRARIES fathomRadiant
   CATKIN_DEPENDS roscpp rospy std_msgs roslib
 #  DEPENDS system_lib
 )
@@ -143,7 +143,7 @@ target_link_libraries(subs
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/fanthomRadiant.cpp
+#   src/${PROJECT_NAME}/fathomRadiant.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -154,7 +154,7 @@ target_link_libraries(subs
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/fanthomRadiant_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/fathomRadiant_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -218,7 +218,7 @@ target_link_libraries(subs
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_fanthomRadiant.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_fathomRadiant.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
