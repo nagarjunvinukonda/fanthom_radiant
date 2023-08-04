@@ -5,6 +5,7 @@
 #include <sstream>
 #include <experimental/filesystem>
 #include <iostream>
+#include <ros/param.h>
 
 namespace fs = std::experimental::filesystem; // Create an alias for the filesystem namespace
 std::string get_csv_file_path()
