@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <!-- Define ROS parameter to specify the CSV file path -->
-
+    <param name="file_path" type="str" value="/home/nagarjunv/c_ws/src/fathom_radiant/src/Dataset.csv"/>
     <!-- Launch the publisher node -->
     <node name="pubs_node" pkg="fathom_radiant" type="pubs" output="screen">
-	<param name="file_path" type="string" value="/home/nagarjunv/cat_ws/src/fathom_radiant/src/Dataset.csv" />
     </node>
 
     <!-- Launch the subscriber node -->
