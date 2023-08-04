@@ -29,7 +29,7 @@ class TestPublisher(unittest.TestCase):
             self.assertTrue(isinstance(msg.time, str))
             self.assertTrue(isinstance(msg.actual_speed, float))
 
-    def test_publishing_message_length(self):
+    def test_publishing_topic_publish(self):
         rospy.init_node('test_publisher_node')
 
         published_topics = rospy.get_published_topics()
