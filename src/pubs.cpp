@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <ros/package.h> // Add this line for ros::package::getPath
-#include <fanthom_radiant/CustomData.h>
+#include <fathom_radiant/CustomData.h>
 #include <fstream>
 #include <sstream>
 #include <experimental/filesystem>
@@ -10,7 +10,7 @@ namespace fs = std::experimental::filesystem; // Create an alias for the filesys
 std::string get_csv_file_path()
 {
     // Get the package path
-    std::string package_path = ros::package::getPath("fanthom_radiant");
+    std::string package_path = ros::package::getPath("fathom_radiant");
 
     // Define the specific CSV file name you want to read
     std::string csv_file_name = "Dataset.csv";
@@ -41,7 +41,7 @@ void publish_csv_data(const std::string& file_path, ros::Publisher& publisher, d
         std::istringstream iss(line);
         std::string token;
 
-        fanthom_radiant::CustomData data_msg;
+        fathom_radiant::CustomData data_msg;
         getline(iss, token, ','); // Skip the index column
         getline(iss, token, ','); // Longitude
         data_msg.longitude = std::stod(token);
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
 {
     ros::init(argc, argv, "pubs");
     ros::NodeHandle nh;
-    ros::Publisher pub = nh.advertise<fanthom_radiant::CustomData>("data", 10);
+    ros::Publisher pub = nh.advertise<fathom_radiant::CustomData>("data", 10);
     std::string file_path;
 
     //if you want to use ros::param un comment this, but ensure you sepcified right path in launch file
