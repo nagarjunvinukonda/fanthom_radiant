@@ -2,8 +2,8 @@
 
 import unittest
 import rospy
-from fanthom_radiant.msg import DiffData
-from fanthom_radiant.msg import CustomData
+from fathom_radiant.msg import DiffData
+from fathom_radiant.msg import CustomData
 
 class TestSubscriber(unittest.TestCase):
 
@@ -63,4 +63,4 @@ class TestSubscriber(unittest.TestCase):
 
 if __name__ == '__main__':
     import rostest
-    rostest.rosrun('fanthom_radiant', 'test_subscriber', TestSubscriber)
+    rostest.rosrun('fathom_radiant', 'test_subscriber', TestSubscriber)
