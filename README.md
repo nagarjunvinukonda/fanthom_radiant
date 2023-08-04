@@ -50,7 +50,7 @@ catkin_make
 Download this repo and put it in the src folder of the catkin_ws and unzip it.
 ```
 cd ~/catkin_ws/src/
-git clone https://repo-fn.roboticresearch.com/nvinukonda.fn/camera_calibration_ros_wiki_gui.git
+git clone https://github.com/nagarjunvinukonda/fanthom_radiant.git
 ```
 
 
