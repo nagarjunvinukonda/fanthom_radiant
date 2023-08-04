@@ -52,8 +52,9 @@ def main():
     rospy.init_node('csv_publisher')
     pub = rospy.Publisher('data', CustomData, queue_size=10)
 
-    # file_path = get_csv_file_path()
-    file_path = rospy.get_param('~file_path', '')
+    file_path = get_csv_file_path()
+    # to get path via ros param
+    # file_path = rospy.get_param('~file_path', '')
     if file_path is None:
         rospy.logerr("CSV file not found in the publisher script folder.")
         return
