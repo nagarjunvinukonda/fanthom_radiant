@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from fanthom_radiant.msg import CustomData
+from fathom_radiant.msg import CustomData
 import csv
 import time
 import os
