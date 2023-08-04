@@ -2,7 +2,7 @@
 
 import unittest
 import rospy
-from fanthom_radiant.msg import CustomData
+from fathom_radiant.msg import CustomData
 
 class TestPublisher(unittest.TestCase):
 
@@ -43,4 +43,4 @@ class TestPublisher(unittest.TestCase):
 
 if __name__ == '__main__':
     import rostest
-    rostest.rosrun('fanthom_radiant', 'test_publisher', TestPublisher)
+    rostest.rosrun('fathom_radiant', 'test_publisher', TestPublisher)
