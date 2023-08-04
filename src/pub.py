@@ -7,21 +7,17 @@ import time
 import os
 import signal
 
-
 def get_csv_file_path():
     # Get the current directory where the script is located
     script_dir = os.path.dirname(os.path.realpath(__file__))
     # Define the specific CSV file name you want to read
     csv_file_name = "Dataset.csv"
-    # csv_file_name = "Dat.csv"
     file_path = os.path.join(script_dir, csv_file_name)
-
     # Check if the specific file exists in the script directory
     if os.path.isfile(file_path):
         return file_path
 
     return None
-
 
 def publish_csv_data(file_path, publisher, rate_hz=3):
     def signal_handler(sig, frame):
@@ -51,10 +47,13 @@ def publish_csv_data(file_path, publisher, rate_hz=3):
 def main():
     rospy.init_node('csv_publisher')
     pub = rospy.Publisher('data', CustomData, queue_size=10)
-
+    
+    # if you want to use User defined ros param then comment below 
     file_path = get_csv_file_path()
-    # to get path via ros param
-    # file_path = rospy.get_param('~file_path', '')
+
+    # if you want to use User defined ros param then uncomment below 
+    # file_path = rospy.get_param('~file_path')
+
     if file_path is None:
         rospy.logerr("CSV file not found in the publisher script folder.")
         return
